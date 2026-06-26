@@ -84,8 +84,8 @@ BookNest/
 
 | Name | Role |
 |------|------|
-| Sadikul Hossain | Database Design |
-| Sadikul Hossain & Tawhid Sharihar | SQL Development |
+| Sadikul Hossain & Tawhid Sharihar | Database Design |
+| Sadikul Hossain  | SQL Development |
 | Proshonjeet Debnath | Documentation & Testing |
 
 ---
