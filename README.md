@@ -84,9 +84,9 @@ BookNest/
 
 | Name | Role |
 |------|------|
-| Member 1 | Database Design |
-| Member 2 | SQL Development |
-| Member 3 | Documentation & Testing |
+| Sadikul Hossain | Database Design |
+| Sadikul Hossain & Tawhid Sharihar | SQL Development |
+| Proshonjeet Debnath | Documentation & Testing |
 
 ---
 
