@@ -1,0 +1,173 @@
+BookNest: A Hotel Management System
+Functional Requirements
+ 
+1. User Management
+1.1 Manager (Administrator)
+•	Full access to the system
+•	Manage employee accounts
+•	Assign user roles and permissions
+•	View all bookings and guest records
+•	Manage room information
+•	Approve discounts and refunds
+•	Manage salaries
+•	View reports and analytics
+•	Manage hotel services
+•	System settings
+1.2 Receptionist
+•	Register guests
+•	Manage bookings
+•	Check room availability
+•	Check-in guests
+•	Check-out guests
+•	Collect payments
+•	Generate invoices
+•	Update guest information
+•	Create service requests
+•	View booking history
+1.3 Housekeeping Staff
+•	Attendance through attendance machine
+•	View assigned rooms
+•	Update cleaning status
+•	Report damaged items
+•	Report maintenance issues
+1.4 Maintenance Staff
+•	View maintenance requests
+•	Update maintenance status
+•	Mark maintenance as completed
+•	Report repair costs
+ 
+2. Room Management
+•	Add new rooms
+•	Update room information
+•	Delete room
+•	Room booking
+•	Room reservation
+•	Guest check-in
+•	Guest check-out
+•	Room availability
+•	Room occupancy status
+•	Room cleaning status
+•	Room maintenance status
+•	Room service requests
+•	Room pricing
+•	Room type management
+•	Room amenities management
+ 
+3. Guest Management
+•	Guest registration
+•	Guest profile
+•	Guest information update
+•	Guest identification (NID/Passport)
+•	Guest booking history
+•	Guest check-in history
+•	Guest check-out history
+•	Guest feedback
+•	Emergency contact information
+ 
+4. Reservation Management
+•	Create reservation
+•	Modify reservation
+•	Cancel reservation
+•	Confirm reservation
+•	Advance booking
+•	Walk-in booking
+•	Reservation history
+•	Booking status tracking
+ 
+5. Payment Management
+•	Cash payment
+•	Credit/Debit card payment
+•	Mobile banking payment
+•	Online payment
+•	Deposit management
+•	Refund management
+•	Invoice generation
+•	Payment history
+ 
+6. Hotel Services
+•	Room service
+•	Food & beverage service
+•	Laundry service
+•	Housekeeping request
+•	Maintenance request
+•	Wake-up call request
+•	Airport pickup request
+•	Additional guest services
+ 
+7. Employee Management
+•	Employee registration
+•	Employee profile
+•	Employee attendance
+•	Employee salary management
+•	Employee role management
+•	Employee contact information
+•	Employee work schedule
+•	Employee performance records
+ 
+8. Housekeeping Management
+•	Cleaning schedule
+•	Room cleaning status
+•	Cleaning assignment
+•	Cleaning completion report
+•	Lost and found records
+•	Damage reports
+ 
+9. Maintenance Management
+•	Maintenance request
+•	Maintenance assignment
+•	Maintenance status
+•	Repair history
+•	Equipment maintenance
+•	Damage reports
+ 
+10. Inventory Management
+•	Room supplies
+•	Cleaning supplies
+•	Linen management
+•	Restaurant inventory
+•	Stock management
+•	Purchase records
+•	Low stock alerts
+ 
+11. Reporting System
+•	Daily booking report
+•	Monthly booking report
+•	Occupancy report
+•	Revenue report
+•	Payment report
+•	Employee attendance report
+•	Salary report
+•	Room status report
+•	Service usage report
+•	Maintenance report
+ 
+12. Authentication & Security
+•	User login
+•	User logout
+•	Password management
+•	Role-based access control
+•	User activity log
+•	Data backup and recovery
+ 
+Database Entities (Tables)
+1.	Users
+2.	Roles
+3.	Employees
+4.	Attendance
+5.	Guests
+6.	Rooms
+7.	Room Types
+8.	Bookings
+9.	Check-ins
+10.	Check-outs
+11.	Payments
+12.	Services
+13.	Service Requests
+14.	Housekeeping
+15.	Maintenance
+16.	Inventory
+17.	Salaries
+18.	Feedback
+19.	Reports
+
+
