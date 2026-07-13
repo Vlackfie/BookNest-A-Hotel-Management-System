@@ -33,37 +33,52 @@ BookNest provides an intuitive dashboard for hotel administrators and staff to:
 * **Modeling Tools:** Draw.io / Lucidchart (for ER and Relational Schemas)
 
 ---
-
-## 📂 Project Structure
+## 📂 System Architecture 
 
 ```text
-BookNest/
-│
-├── backend/                 # Node.js & Express server
-│   ├── config/              # MySQL database connection setup
-│   ├── controllers/         # API logic (handling check-ins, payments, etc.)
-│   ├── routes/              # API endpoints URL routing
-│   └── package.json
-│
-├── frontend/                # React.js Application
-│   ├── public/              # Static assets (HTML, Icons)
-│   ├── src/                 # React components and CSS styling
-│   └── package.json
-│
-├── database/                # SQL Database Scripts
-│   ├── schema.sql           # Table structures, primary/foreign keys, and constraints
-│   ├── insert_data.sql      # Mock data to seed the database for testing
-│   └── triggers.sql         # Automation scripts (e.g., auto-updating room status)
-│
-├── diagrams/                # Database Architecture
-│   ├── er_diagram.png       # Conceptual Entity-Relationship Diagram
-│   └── relational_schema.png# Logical database design mapping
-│
-├── documentation/           # Academic Reports
-│   └── Project_Report.pdf   # Final formal academic report
-│
-├── README.md                # Project documentation home
-└── .gitignore               # Excludes node_modules, .env secrets, etc.
+       [ Client Layer ]              [ Application Layer ]              [ Data Layer ]
+  +--------------------------+     +------------------------+     +------------------------+
+  |   React SPA (Vite)       |     |  Express.js Engine     |     |   MySQL Instance       |
+  |  +--------------------+  |     |  +------------------+  |     |  +------------------+  |
+  |  | Tailwind UI /      |  |     |  | Rate Limiter /   |  |     |  | Connection Pool |  |
+  |  | Context / State    |  |     |  | Helmet / CORS    |  |     |  +------------------+  |
+  |  +--------------------+  |     |  +------------------+  |     |           |            |
+  |            |             |     |           |            |     |  +------------------+  |
+  |      HTTP/HTTPS          |     |  +------------------+  |     |  | Normalized Rel-  |  |
+  |   JSON / REST APIs       |====>|  | JWT / RBAC Guard |  |====>|  | ational Tables   |  |
+  |            |             |     |  +------------------+  |     |  | (InnoDB Engine)  |  |
+  |            v             |     |           |            |     |  +------------------+  |
+  |  +--------------------+  |     |  +------------------+  |     |           |            |
+  |  | Axios HTTP Client  |  |     |  | Controllers /    |  |     |  | Triggers /       |  |
+  |  | Interceptors       |  |     |  | Business Logic   |  |     |  | Constraints /    |  |
+  |  +--------------------+  |     |  +------------------+  |     |  | Indexes          |  |
+  +--------------------------+     +------------------------+     +------------------------+
+```
+---
+
+## 📂Entity-Relationship (ER) Diagram & Schema\
+```text
+[roles] 1 ------N [users] 1 ------ 1 [employees] 1 ------ N [attendance]
+                      |                     |
+                      |                     +------------- N [salaries]
+                      |
+                      +--- 1 [guests] 1 ------ N [bookings] 1 ------ N [payments]
+                                                   |
+                                                   +------ 1 [check_ins] 1 --- 1 [check_outs]
+                                                   |
+                                                   +------ N [service_requests] <--- N [services]
+ 
+ [room_types] 1 ------ N [rooms] 1 ------ N [housekeeping]
+                          |
+                          +------ N [maintenance]
+                          
+ [inventory] 
+ [feedback]
+ [reports]
+ [activity_logs]
+ [notifications]
+ [system_settings]
+
 ```
 
 ---
