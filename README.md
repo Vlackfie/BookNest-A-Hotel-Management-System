@@ -87,8 +87,8 @@ BookNest provides an intuitive dashboard for hotel administrators and staff to:
 
 | Name | Role |
 |------|------|
-| Sadikul Hossain & Tawhid Sharihar | Database Design |
-| Sadikul Hossain  | SQL Development |
+| Sadikul Hossain & Tawhid Sharihar | Frontend & Database Design |
+| Sadikul Hossain  | SQL Development, Backend & UI/UX |
 | Proshonjeet Debnath | Documentation & Testing |
 
 ---
