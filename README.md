@@ -33,7 +33,7 @@ BookNest provides an intuitive dashboard for hotel administrators and staff to:
 * **Modeling Tools:** Draw.io / Lucidchart (for ER and Relational Schemas)
 
 ---
-## 📂 System Architecture 
+## 🏗️ System Architecture 
 
 ```text
        [ Client Layer ]              [ Application Layer ]              [ Data Layer ]
