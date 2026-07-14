@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest | Advanced Hotel Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="brand">
+                <h2>BookNest</h2>
+                <span>A HOTEL MANAGEMENT SYSTEM</span>
+            </div>
+            
+            <div class="user-session-card">
+                <p>Welcome back,</p>
+                <h4 id="current-user-display">Loading User...</h4>
+                <div class="role-badge" id="current-role-badge">SYSTEM</div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active" data-target="dashboard-view">Dashboard & Reports</li>
+                    <li class="nav-item mngr-recp-only" data-target="reservations-view">Reservations & Check-In</li>
+                    <li class="nav-item mngr-recp-only" data-target="guests-view">Guest Ledger</li>
+                    <li class="nav-item mngr-only" data-target="rooms-view">Room Directory Setup</li>
+                    <li class="nav-item mngr-recp-house-only" data-target="housekeeping-view">Housekeeping Controls</li>
+                    <li class="nav-item mngr-recp-maint-only" data-target="maintenance-view">Engineering & Maintenance</li>
+                    <li class="nav-item mngr-only" data-target="employee-view">HR & Payroll Ledger</li>
+                    <li class="nav-item mngr-only" data-target="inventory-view">Inventory Logistics</li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn-logout" onclick="alert('Session logged out successfully.')">Secure Logout</button>
+            </div>
+        </aside>
+
+        <main class="main-window">
+            
+            <header class="app-header">
+                <div class="header-context">
+                    <h1 id="page-title">Dashboard Matrix</h1>
+                    <p id="live-clock"></p>
+                </div>
+                <div class="role-simulator">
+                    <label for="role-selector">Simulation Layer Profile:</label>
+                    <select id="role-selector" onchange="switchRoleContext(this.value)">
+                        <option value="Manager">Manager (Full Access / Admin)</option>
+                        <option value="Receptionist">Receptionist</option>
+                        <option value="Housekeeping">Housekeeping Operator</option>
+                        <option value="Maintenance">Maintenance Engineer</option>
+                    </select>
+                </div>
+            </header>
+
+            <section id="dashboard-view" class="view-panel active">
+                <div class="stats-grid">
+                    <div class="stat-card blue-accent">
+                        <h3>Occupancy Efficiency</h3>
+                        <p class="metric" id="dash-occupancy">0%</p>
+                        <span class="subtext">Active Live Rooms Occupied</span>
+                    </div>
+                    <div class="stat-card green-accent">
+                        <h3>Gross Revenue Intake</h3>
+                        <p class="metric" id="dash-revenue">0.00TK</p>
+                        <span class="subtext">Cash, Card, & Mobile Ledger</span>
+                    </div>
+                    <div class="stat-card orange-accent">
+                        <h3>Housekeeping Attention</h3>
+                        <p class="metric" id="dash-dirty-rooms">0</p>
+                        <span class="subtext">Rooms Tagged 'Dirty' or 'In Progress'</span>
+                    </div>
+                    <div class="stat-card red-accent">
+                        <h3>Maintenance Alarms</h3>
+                        <p class="metric" id="dash-maint-faults">0</p>
+                        <span class="subtext">Unresolved System Faults</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-split">
+                    <div class="content-panel">
+                        <h2>System Wide Performance Reports</h2>
+                        <div class="report-controls">
+                            <button class="btn-secondary" onclick="generateReport('daily')">Run Daily Report</button>
+                            <button class="btn-secondary" onclick="generateReport('revenue')">Financial Statement</button>
+                            <button class="btn-secondary" onclick="generateReport('inventory')">Low Stock Assessment</button>
+                        </div>
+                        <div class="report-box" id="report-terminal-output">
+                            Select an operation parameter above to execute cross-table aggregation queries...
+                        </div>
+                    </div>
+                    
+                    <div class="content-panel">
+                        <h2>Guest Feedback Logs</h2>
+                        <div class="table-scroll">
+                            <table>
+                                th>Guest</th><th>Rating</th><th>Comments</th></tr>
+                                <tbody id="feedback-tbody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="reservations-view" class="view-panel">
+                <div class="two-column-layout">
+                    <div class="content-panel">
+                        <h2>New Front-Desk Reservation</h2>
+                        <form id="reservation-form">
+                            <div class="form-row">
+                                <div class="field">
+                                    <label>Guest Name *</label>
+                                    <input type="text" id="res-guest-name" required placeholder="Full Name">
+                                </div>
+                                <div class="field">
+                                    <label>NID / Passport ID *</label>
+                                    <input type="text" id="res-guest-id" required placeholder="Identification Doc No.">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="field">
+                                    <label>Room Category Option</label>
+                                    <select id="res-room-type" onchange="filterAvailableRoomsBySelection()"></select>
+                                </div>
+                                <div class="field">
+                                    <label>Target Room Assignment *</label>
+                                    <select id="res-room-number" required></select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="field">
+                                    <label>Payment Channel</label>
+                                    <select id="res-payment-method">
+                                        <option value="Cash">Cash Transaction</option>
+                                        <option value="Credit/Debit Card">Credit/Debit Card</option>
+                                        <option value="Mobile Banking">Mobile Banking (bKash/Nagad)</option>
+                                        <option value="Online Payment">Online Portal API Gateway</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label>Advance Deposit Contribution ($)</label>
+                                    <input type="number" id="res-deposit" min="0" value="0">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-primary space-top">Process Immediate Walk-In / Booking</button>
+                        </form>
+                    </div>
+
+                    <div class="content-panel">
+                        <h2>Active Booking Engine Records</h2>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr><th>Ref ID</th><th>Guest Name</th><th>Room</th><th>Status</th><th>Actions</th></tr>
+                                </thead>
+                                <tbody id="bookings-tbody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="guests-view" class="view-panel">
+                <div class="content-panel">
+                    <h2>Master Corporate Guest Profiles Database</h2>
+                    <div class="table-scroll">
+                        <table>
+                            <thead>
+                                <tr><th>Guest UUID</th><th>Full Legal Name</th><th>ID Credentials</th><th>System Action Logs</th></tr>
+                            </thead>
+                            <tbody id="guests-tbody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="rooms-view" class="view-panel">
+                <div class="two-column-layout">
+                    <div class="content-panel">
+                        <h2>Provision New Physical Room Struct</h2>
+                        <form id="room-form">
+                            <div class="field">
+                                <label>Target Room Number</label>
+                                <input type="number" id="rm-number" required placeholder="e.g. 305">
+                            </div>
+                            <div class="field">
+                                <label>Room Configuration Category Blueprint</label>
+                                <select id="rm-type"></select>
+                            </div>
+                            <button type="submit" class="btn-primary space-top">Save Room Instance to Core Matrix</button>
+                        </form>
+                    </div>
+                    <div class="content-panel">
+                        <h2>Active Physical Infrastructure Blueprint</h2>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr><th>Room No</th><th>Tier Class</th><th>Price Tier</th><th>Occupancy Status</th></tr>
+                                </thead>
+                                <tbody id="rooms-tbody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="housekeeping-view" class="view-panel">
+                <div class="content-panel">
+                    <h2>Housekeeping Scheduling & Environment Services</h2>
+                    <p class="view-note">Note: Housekeeping and Managers can modify room cleaning stages here.</p>
+                    <div class="table-scroll">
+                        <table>
+                            <thead>
+                                <tr><th>Room Identification</th><th>Cleaning State Status</th><th>Actions Tracker</th></tr>
+                            </thead>
+                            <tbody id="housekeeping-tbody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="maintenance-view" class="view-panel">
+                <div class="two-column-layout">
+                    <div class="content-panel">
+                        <h2>File System Maintenance Ticket Request</h2>
+                        <form id="maint-issue-form">
+                            <div class="field">
+                                <label>Target Space/Room Location</label>
+                                <input type="number" id="maint-location" required placeholder="e.g. 104">
+                            </div>
+                            <div class="field">
+                                <label>Structural Breakdown Details Description</label>
+                                <textarea id="maint-desc" required placeholder="HVAC Failure, Electrical Short Circuit, Plumbing Issue..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-danger space-top">Route Request To Maintenance Queue</button>
+                        </form>
+                    </div>
+                    <div class="content-panel">
+                        <h2>Open Engineering Maintenance Logs</h2>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr><th>ID</th><th>Room</th><th>Issue Logged</th><th>Current Status</th><th>Actions Tracker</th></tr>
+                                </thead>
+                                <tbody id="maintenance-tbody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="employee-view" class="view-panel">
+                <div class="two-column-layout">
+                    <div class="content-panel">
+                        <h2>Onboard New Enterprise Employee</h2>
+                        <form id="employee-form">
+                            <div class="field">
+                                <label>Employee Legal Name</label>
+                                <input type="text" id="emp-name" required>
+                            </div>
+                            <div class="field">
+                                <label>Organizational Security Role Architecture</label>
+                                <select id="emp-role">
+                                    <option value="Manager">Corporate Manager</option>
+                                    <option value="Receptionist">Front-Desk Receptionist</option>
+                                    <option value="Housekeeping">Housekeeping Crew</option>
+                                    <option value="Maintenance">Maintenance Engineer</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Base Allocation Salary standard ($/mo)</label>
+                                <input type="number" id="emp-salary" value="2500">
+                            </div>
+                            <button type="submit" class="btn-primary space-top">Commit Employee Record</button>
+                        </form>
+                    </div>
+                    <div class="content-panel">
+                        <h2>Active Enterprise Staff & Time Tracking</h2>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr><th>Staff ID</th><th>Name</th><th>Role</th><th>Salary Standard</th><th>Attendance Log</th><th>Operations</th></tr>
+                                </thead>
+                                <tbody id="employee-tbody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="inventory-view" class="view-panel">
+                <div class="two-column-layout">
+                    <div class="content-panel">
+                        <h2>Update Stock Items & Replenishment</h2>
+                        <form id="inventory-form">
+                            <div class="field">
+                                <label>Item Supply Identification Label</label>
+                                <input type="text" id="inv-name" required placeholder="e.g. Luxury Towels">
+                            </div>
+                            <div class="field">
+                                <label>Operational Department Class Category</label>
+                                <select id="inv-category">
+                                    <option value="Room Supplies">Room Amenities & Supplies</option>
+                                    <option value="Cleaning Supplies">Chemicals & Cleaning Utilities</option>
+                                    <option value="Linen Management">Linen & Laundry Storage</option>
+                                    <option value="Restaurant Inventory">F&B Provisions / Restaurant</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Inventory Quantities Units Added</label>
+                                <input type="number" id="inv-qty" min="0" required value="10">
+                            </div>
+                            <button type="submit" class="btn-primary space-top">Process Item Log</button>
+                        </form>
+                    </div>
+                    <div class="content-panel">
+                        <h2>Logistics Warehousing Stock Audit Engine</h2>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr><th>Product Item</th><th>Category Area</th><th>Stock Available</th><th>Status Risk Flag</th></tr>
+                                </thead>
+                                <tbody id="inventory-tbody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
