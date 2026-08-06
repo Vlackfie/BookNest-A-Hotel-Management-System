@@ -1,0 +1,6 @@
+{
+  "name": "BookNest: A Hotel Management System",
+  "description": "An enterprise-grade Hotel Management System (HMS) for room, guest, booking, housekeeping, maintenance, employee, salary, attendance, inventory, services, and financial reporting with role-based access control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
