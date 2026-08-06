@@ -86,19 +86,38 @@ BookNest provides an intuitive dashboard for hotel administrators and staff to:
 
 ## 📌 ScreenShots 
 ## Login Page 
-<img width="3420" height="1873" alt="2D62B830-0BAD-4480-812D-E69C4901BD4B_1_201_a" src="https://github.com/user-attachments/assets/27ee967b-2c69-4880-b657-a9cce4f1d53e" />
+<img width="1693" height="937" alt="Screenshot 2026-08-06 at 10 22 54 PM" src="https://github.com/user-attachments/assets/13127d31-1f95-47ee-990f-c60d373e1ed0" />
 
-## Room Management 
-<img width="3420" height="2048" alt="C0E29541-0B8D-47EB-851F-6F79416AEC7E_1_201_a" src="https://github.com/user-attachments/assets/922ef6c4-fe74-4580-b8ad-aa4c12775f23" />
+## Dashboard of owner
+<img width="1693" height="937" alt="Screenshot 2026-08-06 at 10 23 45 PM" src="https://github.com/user-attachments/assets/cdfeb098-6654-40d5-b712-b682f299b2f4" />
 
-## Dashboard
-<img width="3420" height="2048" alt="5FBE8314-B5DC-4026-B7D2-E15DFBE4FEDE_1_201_a" src="https://github.com/user-attachments/assets/6ee981ca-0b36-49eb-ab34-533148206552" />
+## Room Management And Reservation  
+<img width="1693" height="937" alt="Screenshot 2026-08-06 at 10 23 56 PM" src="https://github.com/user-attachments/assets/bc83ce52-33c3-404d-a935-0bd31e6a39cb" />
 
-## Create New Guest 
-<img width="3420" height="2052" alt="805576B9-C7A3-4A2C-BEEF-912D13873268_1_201_a" src="https://github.com/user-attachments/assets/045a64d8-a1b3-4daa-9a3b-61ff94f6df79" />
+---
+---
+<img width="1693" height="937" alt="Screenshot 2026-08-06 at 10 24 04 PM" src="https://github.com/user-attachments/assets/7e397bcc-a1c0-4e40-a7d8-652d4e44e9bf" />
+
+---
+---
+<img width="1693" height="937" alt="Screenshot 2026-08-06 at 10 24 20 PM" src="https://github.com/user-attachments/assets/229cbd6a-452c-4d69-b607-8d839e2ccc75" />
 
 ## Guest Directory 
-<img width="3420" height="2040" alt="93F312F5-C860-49BA-86F2-E127C1B19855_1_201_a" src="https://github.com/user-attachments/assets/5ea7eb84-ae6f-4315-b512-f09f700df1a2" />
+<img width="1693" height="937" alt="Screenshot 2026-08-06 at 10 25 09 PM" src="https://github.com/user-attachments/assets/67422058-2bec-47dd-bdc9-ce1c393bc1b5" />
+
+
+## Create New Guest 
+<img width="1693" height="937" alt="Screenshot 2026-08-06 at 10 25 22 PM" src="https://github.com/user-attachments/assets/d97d3099-7293-41f5-b322-7c77ebfdfe39" />
+
+## Update Guests
+<img width="1693" height="937" alt="Screenshot 2026-08-06 at 10 25 31 PM" src="https://github.com/user-attachments/assets/1d604167-ff64-4343-8536-4807a57b7b75" />
+
+## Delete Guest 
+<img width="1693" height="937" alt="Screenshot 2026-08-06 at 10 25 44 PM" src="https://github.com/user-attachments/assets/d87f606f-0e15-41f4-9477-f546d55b9aa3" />
+
+## Dashboard of Housekeeping Satff
+<img width="1693" height="937" alt="Screenshot 2026-08-06 at 10 27 28 PM" src="https://github.com/user-attachments/assets/989a8361-ef29-42aa-a083-4800e3949d44" />
+
 
 ---
 ---
