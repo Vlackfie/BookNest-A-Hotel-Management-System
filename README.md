@@ -100,7 +100,16 @@ BookNest provides an intuitive dashboard for hotel administrators and staff to:
 ## Guest Directory 
 <img width="3420" height="2040" alt="93F312F5-C860-49BA-86F2-E127C1B19855_1_201_a" src="https://github.com/user-attachments/assets/5ea7eb84-ae6f-4315-b512-f09f700df1a2" />
 
-
+---
+---
+## 🔐 User Passwrds
+|Role | Email Address| Username | Password|
+|-----|--------------|----------|---------|
+| Owner | owner@booknest.com | owner |	password123 |
+| Manager | manager@booknest.com | manager | password123 |
+| Receptionist | receptionist@booknest.com | receptionist | password123 |
+| Housekeeping | housekeeping@booknest.com | housekeeper | password123 |
+| Maintenance | maintenance@booknest.com | maintenance | password123 |
 ---
 ---
 
