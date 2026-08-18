@@ -118,6 +118,8 @@ BookNest provides an intuitive dashboard for hotel administrators and staff to:
 ## Dashboard of Housekeeping Satff
 <img width="1693" height="937" alt="Screenshot 2026-08-06 at 10 27 28 PM" src="https://github.com/user-attachments/assets/989a8361-ef29-42aa-a083-4800e3949d44" />
 
+## INVOICE 
+<img width="618" height="866" alt="Screenshot 2026-08-19 at 12 26 53 AM" src="https://github.com/user-attachments/assets/8ceed76a-8504-47e1-8db1-4e27bacc180a" />
 
 ---
 ---
