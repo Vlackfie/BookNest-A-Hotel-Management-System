@@ -58,7 +58,8 @@ BookNest provides an intuitive dashboard for hotel administrators and staff to:
 
 ## 📂Entity-Relationship (ER) Diagram & Schema
 
-<img width="1209" height="1616" alt="Untitled" src="https://github.com/user-attachments/assets/80ac1481-8c55-45cc-90d5-654676e71f7f" />
+<img width="1209" height="1616" alt="B64D7C13-0976-475A-A42E-CBE1DAC4C924_1_201_a" src="https://github.com/user-attachments/assets/c14e06cb-ce50-4a9c-92a2-7ee3ab688291" />
+
 
 
 ---
