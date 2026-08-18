@@ -56,30 +56,9 @@ BookNest provides an intuitive dashboard for hotel administrators and staff to:
 ```
 ---
 
-## 📂Entity-Relationship (ER) Diagram & Schema\
-```text
-[roles] 1 ------N [users] 1 ------ 1 [employees] 1 ------ N [attendance]
-                      |                     |
-                      |                     +------------- N [salaries]
-                      |
-                      +--- 1 [guests] 1 ------ N [bookings] 1 ------ N [payments]
-                                                   |
-                                                   +------ 1 [check_ins] 1 --- 1 [check_outs]
-                                                   |
-                                                   +------ N [service_requests] <--- N [services]
- 
- [room_types] 1 ------ N [rooms] 1 ------ N [housekeeping]
-                          |
-                          +------ N [maintenance]
-                          
- [inventory] 
- [feedback]
- [reports]
- [activity_logs]
- [notifications]
- [system_settings]
+## 📂Entity-Relationship (ER) Diagram & Schema
 
-```
+<img width="1209" height="1616" alt="Untitled" src="https://github.com/user-attachments/assets/80ac1481-8c55-45cc-90d5-654676e71f7f" />
 
 
 ---
