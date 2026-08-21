@@ -116,11 +116,11 @@ BookNest provides an intuitive dashboard for hotel administrators and staff to:
 
 ## 👥 Team Members
 
-| Name | Role |
-|------|------|
-| Sadikul Hossain & Tawhid Sharihar | Frontend & Database Design |
-| Sadikul Hossain  | SQL Development, Backend & UI/UX |
-| Proshonjeet Debnath | Documentation & Testing |
+| Name | Student ID | Role |
+|------|------|------|
+| Proshonjeet Debnath | 232-115-051| Documentation & Testing |
+|  Tawhid Sharihar | 242-115-070|Frontend & Database Design | 
+| Sadikul Hossain  | 242-115-079| Database Design, SQL Development, Backend & UI/UX |
 
 ---
 
