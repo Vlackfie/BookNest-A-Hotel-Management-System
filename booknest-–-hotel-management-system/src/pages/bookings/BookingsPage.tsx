@@ -426,3 +426,6 @@ export const BookingsPage: React.FC = () => {
     </div>
   );
 };
+
+
+

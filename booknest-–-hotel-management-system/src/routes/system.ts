@@ -102,3 +102,6 @@ router.get('/sql-script', async (req: AuthRequest, res: Response) => {
 });
 
 export default router;
+
+
+

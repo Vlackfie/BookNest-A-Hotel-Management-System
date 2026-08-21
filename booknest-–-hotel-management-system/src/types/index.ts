@@ -312,3 +312,6 @@ export interface DashboardStats {
   revenueByMonth: { month: string; revenue: number; bookings: number }[];
   roomStatusBreakdown: { name: string; value: number; color: string }[];
 }
+
+
+

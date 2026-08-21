@@ -129,3 +129,6 @@ export const ReceptionistDashboard: React.FC<Props> = ({ stats, onNavigate }) =>
     </div>
   );
 };
+
+
+

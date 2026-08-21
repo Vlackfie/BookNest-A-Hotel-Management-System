@@ -52,7 +52,15 @@ async function startServer() {
   // Vite middleware for development vs static production serving
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: {
+        middlewareMode: true,
+        // Check-in and check-out persist records to this JSON database.  It is
+        // runtime data, not client source, so watching it would force a full
+        // browser reload and discard the generated invoice modal.
+        watch: {
+          ignored: ['**/data/booknest.json']
+        }
+      },
       appType: 'spa',
     });
     app.use(vite.middlewares);
@@ -72,3 +80,5 @@ async function startServer() {
 startServer().catch((err) => {
   console.error('[BookNest HMS] Server startup failed:', err);
 });
+
+

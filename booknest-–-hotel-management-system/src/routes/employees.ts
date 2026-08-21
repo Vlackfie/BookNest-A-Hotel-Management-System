@@ -404,3 +404,6 @@ router.post('/salaries', authenticateToken, authorizeRoles('Owner', 'Manager'), 
 
 export default router;
 
+
+
+

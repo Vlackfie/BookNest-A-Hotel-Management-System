@@ -123,3 +123,6 @@ export const ManagerDashboard: React.FC<Props> = ({ stats, onNavigate }) => {
     </div>
   );
 };
+
+
+

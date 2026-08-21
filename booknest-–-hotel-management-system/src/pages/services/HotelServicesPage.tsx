@@ -189,3 +189,6 @@ export const HotelServicesPage: React.FC = () => {
     </div>
   );
 };
+
+
+

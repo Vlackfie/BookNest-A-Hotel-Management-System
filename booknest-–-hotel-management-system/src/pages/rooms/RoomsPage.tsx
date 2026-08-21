@@ -489,3 +489,6 @@ export const RoomsPage: React.FC = () => {
     </div>
   );
 };
+
+
+

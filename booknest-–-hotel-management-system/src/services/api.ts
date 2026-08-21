@@ -113,3 +113,6 @@ export const api = {
   getSettings: () => request<{ settings: SystemSetting[] }>('/system/settings'),
   updateSettings: (settings: any[]) => request<{ message: string }>('/system/settings', { method: 'PUT', body: JSON.stringify({ settings }) })
 };
+
+
+
