@@ -129,8 +129,6 @@ BookNest provides an intuitive dashboard for hotel administrators and staff to:
 Database Management System (DBMS)
 
 ---
-The project is completed
----
 
 ## 📄 License
 
