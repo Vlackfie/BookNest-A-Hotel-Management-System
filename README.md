@@ -130,6 +130,6 @@ Database Management System (DBMS)
 
 ---
 
-## 📄 License
+## 📄 Licenseadd
 
 This project is developed for educational purposes only.
